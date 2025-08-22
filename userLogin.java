@@ -15,10 +15,8 @@ public class userLogin {
         System.out.print("Senha: ");
         inputPassword = scanner.nextLine();
 
-        if (inputLogin.equals(login)) {
-            if (inputPassword.equals(password)) {
+        if (inputLogin.equals(login)||inputPassword.equals(password)) {
                 System.out.println("Entrou no sistema");
-            }
         }
         else {
             System.out.println("Senha ou usuario errado");
