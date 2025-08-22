@@ -6,13 +6,14 @@ public class operacoesMatematicas {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Primeiro num: ");
+        System.out.print("Primeiro num: ");
         double num1 = scanner.nextDouble();
-        System.out.println("Operador: ");
+        System.out.print("Operador: ");
         char op = scanner.next().charAt(0);
-        System.out.println("Ultimo num: ");
+        System.out.print("Ultimo num: ");
         double num2 = scanner.nextDouble();
-        double result;
+        double result = 0;
+        boolean validOperator = true;
 
         switch (op) {
             case '+' -> result = num1 + num2;
@@ -21,10 +22,17 @@ public class operacoesMatematicas {
             case '/' -> {
                 if (num2 == 0) {
                     System.out.println("Divisor invalido");
+                    validOperator = false;
                 }
                 result = num1 / num2;
             }
+            default -> {
+                System.out.println("Operacao invalida");
+                validOperator = false;
+            }
         }
-        System.out.println("Result: " + result);
+        if (validOperator) {
+            System.out.println("Resultado: " + result);
+        }
     }
 }
