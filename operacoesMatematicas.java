@@ -34,5 +34,7 @@ public class operacoesMatematicas {
         if (validOperator) {
             System.out.println("Resultado: " + result);
         }
+
+        scanner.close();
     }
 }
