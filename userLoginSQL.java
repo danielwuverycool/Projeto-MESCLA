@@ -3,7 +3,7 @@ package MESCLA;
 import java.sql.*;
 import java.util.Scanner;
 
-public class SQLTeste {
+public class userLoginSQL {
     public static void main(String[] args) {
         try{
             Scanner scanner = new Scanner(System.in);
